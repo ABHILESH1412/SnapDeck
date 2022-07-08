@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+}
+*::after, *::before{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    /* margin: 0px; */
+    background: #cbe0f8;
+}
+header{
+    position: fixed;
+    z-index: 1;
+    height: 25rem;
+    width: 100%;
+    background: #cbe0f8;
+    user-select: none;
+}
+
+/* ############################ header ############################# */
+
+#titleBar{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+
+    height: 10rem;
+    background: #3d80d2;
+    color: white;
+    padding-top: 1rem;
+
+    font-size: 6rem;
+    font-style: bold;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+}
+.toolsContainer{
+    position: fixed;
+    top: 15rem;
+    width: 99.5%;
+    display: flex;
+    justify-content: center;
+}
+.colors{
+    display: flex;
+}
+#textColorBtn, #highlighterBtn{
+    position: relative;
+}
+.textColors,
+.highlighterColors{
+    position: absolute;
+    left: -50%;
+    transform: translateX(-10%);
+    display: none;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 13rem;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+    background: rgb(248, 245, 245);
+    box-shadow: 0 0 0.3rem 0.3rem rgba(145, 141, 141, 0.329);
+    border: 1px solid black;
+}
+.textColors div,
+.highlighterColors div{
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+#textColorBtn:hover .textColors,
+#highlighterBtn:hover .highlighterColors{
+    display: flex;
+}
+#tools{
+    max-width: 1050px;
+    border-radius: 8px;
+    background: rgba(185, 182, 189, 0.205);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#tools img{
+    width: 20px;
+    height: 20px;
+}
+#tools button{
+    border: none;
+    background-color: transparent;
+}
+#tools button,
+.colors img{
+    margin: 1rem 1.5rem;
+}
+#tools button:hover,
+.textColors div:hover,
+.highlighterColors div:hover{
+    cursor: pointer;
+}
+#tools select{
+    height: 3rem;
+    font-size: 2rem;
+}
+/* ################################################################## */
+.container{
+    padding-top: 30rem;
+}
+#textEditor{
+    background: white;
+    border-radius: 7px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 1.5em;
+}
+
+#textEditor img:hover{
+    cursor: default;
+}
+#textEditor p{
+    margin: 0px;
+}
+
+/* ###################################### Context Menu ################## */
+#contextmenu{
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background: #1b1a1a;
+    border-radius: 5px;
+    /* transform: scale(0);
+    transform-origin: top left; */
+    display: none;
+    user-select: none;
+}
+
+#contextmenu .item{
+    padding: 8px 10px;
+    font-size: 20px;
+    color: #eee;
+    cursor: pointer;
+    border-radius: inherit;
+}
+
+#contextmenu .item:hover{
+    background: #343434;
+}
+
+#contextmenu.visible{
+    /* transform: scale(1);
+    transition: transform 200ms ease-in-out; */
+    display: block;
+}
+
+#contextmenu a{
+    text-decoration: none;
+}
+
+/* ##################################################################### */
+@media print{
+    @page{
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+    header{
+        display: none;
+    }
+    #textEditor{
+        border-radius: 0px;
+        border: 0px;
+        padding: 0px;
+        box-shadow: none;
+    }
+    .container{
+        padding: 0px;
+    }
+    #textEditor img{
+        border: none;
+    }
+    body{
+        margin: 0px;
+        background: white;
+    }
+}

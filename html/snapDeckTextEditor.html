@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/snapDeckTextEditor.css">
+    <link rel="stylesheet" href="../scripts/jquery-ui-1.13.1/jquery-ui.css">
+    <link rel="stylesheet" href="../scripts/jquery-ui-1.13.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../scripts/jquery-ui-1.13.1/jquery-ui.theme.css">
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/jquery-ui-1.13.1/external/jquery/jquery.js" defer></script>
+    <script src="../scripts/jquery-ui-1.13.1/jquery-ui.js" defer></script>
+    <script src="../scripts/textEditor.js" defer></script>
+    <title>SnapDeck</title>
+</head>
+<body>
+    <header>
+        <div id="titleBar">
+            <!-- <img src="../Images/sd logo.png" alt="" class="logo">
+            <input type="text" placeholder="Untitled Document" class="documentName">
+            <button id="print"><img src="../Images/Download.png" alt="Download" title="Download as PDF" class="download"></button> -->
+            <!-- <img src="../Images/onlylogo.png" alt=""> -->
+            SNAPDECK
+            <img src="../Images/downloading_white_48dp.svg" alt="" width="50px">
+        </div>
+        <div class="toolsContainer">
+            <div id="tools">
+                <button id="bold" title="Bold"><img src="../Images/bold-solid.svg" alt="Bold"></button>
+                <button id="italic" title="Italic"><img src="../Images/italic-solid.svg" alt="Italic"></button>
+                <button id="underline" title="Underline"><img src="../Images/underline-solid.svg" alt="Underline"></button>
+                <select name="fonts" id="fonts">
+                    <option value="Arial" selected>Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Segoe UI">Segoe UI</option>
+                    <option value="Lucida sans">Lucida Sans</option>
+                    <option value="Cursive">Cursive</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="monospace">Monospace</option>
+                </select>
+                <select name="fontSize" id="fontSize">
+
+                </select>
+                <div class="colors">
+                    <div id="textColorBtn">
+                        <img src="../Images/text-color-svgrepo-com.svg" alt="">
+                        <div class="textColors">
+                            <div style="background: Black;"></div>
+                            <div style="background: White;"></div>
+                            <div style="background: red;"></div>
+                            <div style="background: Orange;"></div>
+                            <div style="background: green;"></div>
+                            <div style="background: darkgreen;"></div>
+                            <div style="background: blue;"></div>
+                            <div style="background: darkblue;"></div>
+                            <div style="background: purple;"></div>
+                            <div style="background: pink;"></div>
+                            <div style="background: yellow;"></div>
+                            <div style="background: brown;"></div>
+                        </div>
+                    </div>
+                    <div id="highlighterBtn">
+                        <img src="../Images/highlighter-svgrepo-com.svg" alt="">
+                        <div class="highlighterColors">
+                            <div style="background: White;"></div>
+                            <div style="background: Black;"></div>
+                            <div style="background: Orange;"></div>
+                            <div style="background: lightgreen;"></div>
+                            <div style="background: lightblue;"></div>
+                            <div style="background: pink;"></div>
+                            <div style="background: yellow;"></div>
+                            <div style="background: lightgray;"></div>
+                        </div>
+                    </div>
+                </div>
+                <button id="strikeThrough" title="Strikethrough"><img src="../Images/strikethrough-solid.svg" alt="strikethrough"></button>
+                <button id="superscript" title="Superscript"><img src="../Images/superscript-solid.svg" alt="superscript"></button>
+                <button id="subscript" title="Subscript"><img src="../Images/subscript-solid.svg" alt="subscript"></button>
+                <button id="indent" title="Indent"><img src="../Images/indent-solid.svg" alt="indent"></button>
+                <button id="outdent" title="Outdent"><img src="../Images/outdent-solid.svg" alt="outdent"></button>
+                <button id="justifyLeft" title="Left Align"><img src="../Images/align-left-solid.svg" alt="left-align"></button>
+                <button id="justifyCenter" title="Center Align"><img src="../Images/align-center-solid.svg" alt="center-align"></button>
+                <button id="justifyRight" title="Right Align"><img src="../Images/align-right-solid.svg" alt="right-align"></button>
+                <button id="justifyFull" title="Justify Content"><img src="../Images/align-justify-solid.svg" alt="Justify-Content"></button>
+                <button id="insertUnorderedList" title="Unordered List"><img src="../Images/list-solid.svg" alt="unordered-list"></button>
+                <button id="insertOrderedList" title="Ordered List"><img src="../Images/list-ol-solid.svg" alt="ordered-list"></button>
+                <button id="link" title="Link"><img src="../Images/link-solid.svg" alt="Link"></button>
+                <button id="unlink" title="Unlink"><img src="../Images/Unlink.svg" alt="Unlink"></button>
+            </div>  
+        </div>      
+    </header>
+
+    <div class="container">
+        <div id="textEditor" contenteditable="true" class="normalText" >Type Here</div>
+    </div>
+
+    <div id="contextmenu">
+        <div class="item">25%</div>
+        <div class="item">50%</div>
+        <div class="item">75%</div>
+        <div class="item">100%</div>
+        <a class="item" download style="display: block;">Download</a>
+    </div>
+</body>
+</html>

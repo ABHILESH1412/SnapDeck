@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "SnapDeck",
+    "description": "Notes taking extension",
+    "version": "0.0.1",
+
+    "browser_action": {
+        "default_popup": "./html/popup.html"
+    },
+
+    "permissions": [
+        "storage",
+        "tabs",
+        "<all_urls>",
+        "activeTab"
+    ]
+}
